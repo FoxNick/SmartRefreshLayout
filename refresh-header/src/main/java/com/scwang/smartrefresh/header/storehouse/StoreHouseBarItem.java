@@ -5,6 +5,7 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+import java.security.SecureRandom;
 
 import java.util.Random;
 
@@ -48,7 +49,7 @@ public class StoreHouseBarItem extends Animation {
     }
 
     public void resetPosition(int horizontalRandomness) {
-        Random random = new Random();
+        Random random = new SecureRandom();
         translationX = -random.nextInt(horizontalRandomness) + horizontalRandomness;
     }
 
