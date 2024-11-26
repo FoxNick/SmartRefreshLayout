@@ -218,7 +218,9 @@ public class FunGameBattleCityHeader extends FunGameView {
         wipeOutNum = 0;
 
         if (enemyTankSpace > 12)
-        enemyTankSpace -= 12;
+        {
+            enemyTankSpace -= 12;
+        }
 
         if (bulletSpace > 30)
         bulletSpace -= 30;
