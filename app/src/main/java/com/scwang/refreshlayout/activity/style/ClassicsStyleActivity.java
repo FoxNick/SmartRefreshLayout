@@ -24,6 +24,7 @@ import com.scwang.refreshlayout.util.DynamicTimeFormat;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import java.security.SecureRandom;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -81,7 +82,7 @@ public class ClassicsStyleActivity extends AppCompatActivity implements AdapterV
 
         mRefreshLayout = findViewById(R.id.refreshLayout);
 
-        int delta = new Random().nextInt(7 * 24 * 60 * 60 * 1000);
+        int delta = new SecureRandom().nextInt(7 * 24 * 60 * 60 * 1000);
         mClassicsHeader = (ClassicsHeader)mRefreshLayout.getRefreshHeader();
         mClassicsHeader.setLastUpdateTime(new Date(System.currentTimeMillis()-delta));
         mClassicsHeader.setTimeFormat(new SimpleDateFormat("更新于 MM-dd HH:mm", Locale.CHINA));
