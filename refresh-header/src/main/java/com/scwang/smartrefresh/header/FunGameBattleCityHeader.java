@@ -12,6 +12,7 @@ import android.view.View;
 import com.scwang.smartrefresh.header.fungame.FunGameView;
 import com.scwang.smartrefresh.layout.api.RefreshKernel;
 import com.scwang.smartrefresh.layout.util.SmartUtil;
+import java.security.SecureRandom;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -129,7 +130,7 @@ public class FunGameBattleCityHeader extends FunGameView {
 
     public FunGameBattleCityHeader(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
-        random = new Random();
+        random = new SecureRandom();
     }
 
     @Override

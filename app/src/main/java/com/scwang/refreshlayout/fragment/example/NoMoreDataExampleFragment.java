@@ -18,6 +18,7 @@ import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+import java.security.SecureRandom;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -112,7 +113,7 @@ public class NoMoreDataExampleFragment extends Fragment {
         }
     }
 
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     private Collection<Void> loadData() {
         int count = 3 + random.nextInt(10);

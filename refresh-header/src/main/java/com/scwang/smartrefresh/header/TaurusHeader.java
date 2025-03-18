@@ -23,6 +23,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.internal.InternalAbstract;
 import com.scwang.smartrefresh.layout.util.SmartUtil;
+import java.security.SecureRandom;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -124,7 +125,7 @@ public class TaurusHeader extends InternalAbstract implements RefreshHeader {
 
         mMatrix = new Matrix();
         mWinds = new HashMap<>();
-        mRandom = new Random();
+        mRandom = new SecureRandom();
 
         mWindPaint = new Paint();
         mWindPaint.setColor(0xffffffff);
