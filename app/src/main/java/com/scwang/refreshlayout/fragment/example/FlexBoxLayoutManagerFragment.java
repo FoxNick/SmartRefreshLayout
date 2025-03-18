@@ -20,6 +20,7 @@ import com.scwang.refreshlayout.R;
 import com.scwang.refreshlayout.adapter.BaseRecyclerAdapter;
 import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.smartrefresh.layout.util.SmartUtil;
+import java.security.SecureRandom;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -61,7 +62,7 @@ public class FlexBoxLayoutManagerFragment extends Fragment {
 
         recyclerView.setAdapter(new BaseRecyclerAdapter<Object>(Arrays.asList(new Object[100]),0) {
 
-            Random random = new Random();
+            Random random = new SecureRandom();
 
             @Override
             protected void onBindViewHolder(SmartViewHolder holder, Object model, int position) {
